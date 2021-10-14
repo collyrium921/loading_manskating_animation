@@ -1,0 +1,44 @@
+html,
+body,
+div,
+span,
+table,
+td,
+p,
+input,
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Roboto", Helvetica, Calibri;
+    font-size: 100%;
+    line-height: 1em;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #262020;
+}
+
+.walking-man-container {
+    width: 100%;
+    position: relative;
+}
+
+.walk-man {
+    stroke: white;
+    fill: white;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 400px;
+    display: none;
+}

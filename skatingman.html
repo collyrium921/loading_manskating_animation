@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKATING</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        table,
+        td,
+        p,
+        input,
+        img {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: "Roboto", Helvetica, Calibri;
+            font-size: 100%;
+            line-height: 1em;
+            vertical-align: baseline;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #262020;
+        }
+        
+        .skate,
+        .right-skate {
+            position: relative;
+        }
+        
+        .moving-man {
+            background-image: url("images/man-front-hand-straight.svg");
+            position: absolute;
+            left: 0;
+            top: 25rem;
+            width: 4rem;
+            height: 6.2rem;
+            display: block;
+            animation: move-skate 7s linear forwards;
+        }
+        
+        .circle-dot {
+            animation: setPosition 1s linear forwards;
+        }
+        
+        .last-image {
+            display: none;
+            position: absolute;
+            top: 20rem;
+            left: 45rem;
+            height: 135px;
+        }
+        
+        @keyframes setPosition {
+            100% {
+                margin-top: 7rem;
+            }
+        }
+        
+        @keyframes move-skate {
+            60% {
+                left: 23rem;
+            }
+            63% {
+                left: 25rem;
+            }
+            64% {
+                background-image: url("images/man-back-hand-forward-tilt.svg");
+            }
+            65% {
+                left: 30rem;
+            }
+            68% {
+                left: 33rem;
+            }
+            69% {
+                background-image: url('images/man-front-hand-forward-tilt.svg');
+            }
+            70% {
+                left: 35rem;
+            }
+            73% {
+                left: 38rem;
+                top: 13rem;
+            }
+            74% {
+                background-image: url('images/man-front-hand-straight.svg');
+            }
+            75% {
+                left: 40rem;
+                top: 15rem;
+            }
+            78% {
+                left: 41rem;
+            }
+            79% {
+                background-image: url('images/man-back-hand-backward-tilt.svg');
+            }
+            80% {
+                left: 42rem;
+                top: 18rem;
+            }
+            83% {
+                left: 42rem;
+                top: 20rem;
+            }
+            84% {
+                background-image: url('images/man-front-hand-backward-tilt.svg');
+            }
+            85% {
+                left: 45rem;
+                top: 20rem;
+            }
+            93% {
+                left: 45rem;
+                top: 20rem;
+            }
+            94% {
+                background-image: url('images/man-back-hand-straight.svg');
+            }
+            95% {
+                left: 45rem;
+                top: 20rem;
+            }
+            100% {
+                left: 45rem;
+                top: 20rem;
+            }
+        }
+        
+        #man-back-hand-straight {
+            transition: .5s all;
+        }
+        
+        #Path_41353 {
+            animation: hide-right-hand .5s linear forwards;
+        }
+        
+        @keyframes hide-right-hand {
+            to {
+                d: path("M542.167,63.539 l0,0");
+            }
+        }
+        
+        #Path_41354 {
+            animation: hide-left-hand .5s linear forwards;
+        }
+        
+        @keyframes hide-left-hand {
+            to {
+                d: path("M510.453,66.425");
+            }
+        }
+        
+        #Path_41355 {
+            animation: hide-skate .5s linear forwards;
+        }
+        
+        @keyframes hide-skate {
+            to {
+                d: path("M569.978,120.955 l0,0");
+            }
+        }
+        
+        .letter-o {
+            position: absolute;
+            top: 26.5rem;
+            left: 40rem;
+            transform: rotate( -105deg) translate(5%);
+        }
+        
+        .letter-o circle {
+            stroke-dasharray: 700;
+            animation: createCircle 1s 8s linear forwards;
+            stroke-dashoffset: 700;
+        }
+        
+        @keyframes createCircle {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        .hidden-container {
+            position: relative;
+            display: none;
+            height: 100px;
+            transform: rotate(-180deg);
+            width: 20px;
+            transform-origin: 40px 8px;
+            animation: moveCircle 1s linear forwards;
+        }
+        
+        .hidden-svg {
+            top: 100px;
+            position: absolute;
+        }
+        
+        @keyframes moveCircle {
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+        
+        .right-movement {
+            background-image: url("images/man-front-hand-straight.svg");
+            position: absolute;
+            right: 0;
+            top: 25rem;
+            width: 4rem;
+            height: 6.2rem;
+            display: block;
+            animation: move-skate-right 7s linear forwards;
+        }
+        
+        @keyframes move-skate-right {
+            60% {
+                right: 23rem;
+            }
+            63% {
+                right: 25rem;
+            }
+            64% {
+                background-image: url("images/man-back-hand-forward-tilt.svg");
+            }
+            65% {
+                right: 30rem;
+            }
+            68% {
+                right: 33rem;
+            }
+            69% {
+                background-image: url('images/man-front-hand-forward-tilt.svg');
+            }
+            70% {
+                right: 35rem;
+            }
+            73% {
+                right: 38rem;
+                top: 13rem;
+            }
+            74% {
+                background-image: url('images/man-front-hand-straight.svg');
+            }
+            75% {
+                right: 40rem;
+                top: 15rem;
+            }
+            78% {
+                right: 41rem;
+            }
+            79% {
+                background-image: url('images/man-back-hand-backward-tilt.svg');
+            }
+            80% {
+                right: 42rem;
+                top: 18rem;
+            }
+            83% {
+                right: 42rem;
+                top: 20rem;
+            }
+            84% {
+                background-image: url('images/man-front-hand-backward-tilt.svg');
+            }
+            85% {
+                right: 45rem;
+                top: 20rem;
+            }
+            93% {
+                right: 45rem;
+                top: 20rem;
+            }
+            94% {
+                background-image: url('images/man-back-hand-straight.svg');
+            }
+            95% {
+                right: 45rem;
+                top: 20rem;
+            }
+            100% {
+                right: 45rem;
+                top: 20rem;
+            }
+        }
+        
+        .right-last-image {
+            display: none;
+            position: absolute;
+            top: 26rem;
+            right: 44.5rem;
+            height: 135px;
+        }
+        
+        div.right-hidden-container {
+            position: relative;
+            display: none;
+            transform: rotate( 90deg)!important;
+            transform-origin: 140px 10px;
+            animation: moveCircle 1s linear forwards;
+        }
+        
+        .right-letter-o {
+            position: absolute;
+            top: 26.5rem;
+            right: 32rem;
+            transform: rotate( -190deg) translate(5%);
+        }
+        
+        .right-letter-o circle {
+            stroke-dasharray: 700;
+            animation: createCircle .5s 8s linear forwards;
+            stroke-dashoffset: 700;
+        }
+        
+        .line-letter-b {
+            position: absolute;
+            top: 19rem;
+            right: 46rem;
+        }
+        
+        .line-letter-b path {
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            animation: move-line .5s 8.5s linear forwards;
+        }
+        
+        @keyframes move-line {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="skate">
+        <div class="moving-man">
+
+        </div>
+        <div class="last-image">
+            <svg xmlns="http://www.w3.org/2000/svg" class="circle-dot" width="66.9" height="100.008" viewBox="0 0 66.9 100.008">
+                <g id="man-back-hand-straight" transform="translate(-504.032 -47.902)">
+                  <path id="Path_41352" data-name="Path 41352" d="M530.975,64.683A9.027,9.027,0,1,0,527.85,52.3,9.027,9.027,0,0,0,530.975,64.683Z" transform="translate(4.309)" fill="#e7e7e7"/>
+                  <path id="Path_41353" data-name="Path 41353" d="M542.167,63.539l-9.886.522a3.249,3.249,0,0,0-3.073,3.416L530.817,98c0,.057.019.109.026.165L521.956,112.6c-.019.032-.029.066-.047.1a3.514,3.514,0,0,0-.692,2.046l-.237,18.185a3.593,3.593,0,0,0,3.505,3.635l.79.018a3.519,3.519,0,0,0,3.6-3.481l.221-16.972,9.081-14.76a3.4,3.4,0,0,0,.253-.523l1.535-.081,5.934,14.622-1.239,17.156a3.518,3.518,0,0,0,3.29,3.774l.788.05a3.594,3.594,0,0,0,3.8-3.324l1.309-18.14a3.509,3.509,0,0,0-.373-1.827,3.546,3.546,0,0,0-.109-.376l-6.189-15.246a2.854,2.854,0,0,0,.016-.323l-1.3-24.64,10.165,20a2.841,2.841,0,0,0,4.007.281l.477-.415a2.84,2.84,0,0,0,.281-4.007c-3.324-8.442-12.5-25.184-16.819-24.81A12.753,12.753,0,0,0,542.167,63.539Z" transform="translate(3.102 3.372)" fill="#e7e7e7"/>
+                  <path id="Path_41354" data-name="Path 41354" d="M510.453,66.425l13.888,4.231a2.782,2.782,0,0,1,.551.236,2.815,2.815,0,0,1,.52.291l10.452,7.546-5.307,3.856-8.46-6.013-13.483-4.108a2.841,2.841,0,0,1-1.891-3.545l.185-.6A2.841,2.841,0,0,1,510.453,66.425Z" transform="matrix(0.588, -0.809, 0.809, 0.588, 152.622, 456.536)" fill="#e7e7e7"/>
+                  <path id="Path_41355" data-name="Path 41355" d="M569.978,120.955a.562.562,0,0,0-.7.371c-.922,2.963-10.42,2.963-14,2.963h-31c-3.575,0-13.074,0-14-2.963a.563.563,0,1,0-1.075.334c.723,2.324,4.484,3.234,9.04,3.569l2.1,2.1a3.205,3.205,0,0,0-.424,1.574,3.253,3.253,0,1,0,6.507,0,3.212,3.212,0,0,0-.407-1.544l1.909-1.909a.4.4,0,0,0,.024-.038h25.038a.542.542,0,0,0,.052.078l1.838,1.838a3.222,3.222,0,0,0-.424,1.574,3.253,3.253,0,1,0,6.507,0,3.212,3.212,0,0,0-.407-1.544l2.172-2.173a.59.59,0,0,0,.058-.089c3.872-.421,6.915-1.37,7.559-3.438A.564.564,0,0,0,569.978,120.955Zm-46.8,10.076A2.128,2.128,0,1,1,525.3,128.9,2.129,2.129,0,0,1,523.176,131.031Zm34.536,0a2.128,2.128,0,1,1,2.128-2.128A2.13,2.13,0,0,1,557.713,131.031Z" transform="translate(0.557 15.754)" fill="#e7e7e7"/>
+                </g>
+            </svg>
+            <div class="hidden-container" style="height: 100px; width: 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="hidden-svg" width="66.9" height="100.008" viewBox="0 0 66.9 100.008">
+                    <g id="man-back-hand-straight" transform="translate(-504.032 -47.902)">
+                      <path id="Path_41352" data-name="Path 41352" d="M530.975,64.683A9.027,9.027,0,1,0,527.85,52.3,9.027,9.027,0,0,0,530.975,64.683Z" transform="translate(4.309)" fill="#e7e7e7"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <div class="circle">
+            <svg class="letter-o" height="250" width="250">
+                <circle  cx="120" cy="120" r="100" stroke="white" stroke-width="20" fill="none" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="right-skate">
+        <div class="right-movement"></div>
+        <div class="right-last-image">
+            <svg xmlns="http://www.w3.org/2000/svg" class="circle-dot" width="66.9" height="100.008" viewBox="0 0 66.9 100.008">
+                <g id="man-back-hand-straight" transform="translate(-504.032 -47.902)">
+                  <path id="Path_41352" data-name="Path 41352" d="M530.975,64.683A9.027,9.027,0,1,0,527.85,52.3,9.027,9.027,0,0,0,530.975,64.683Z" transform="translate(4.309)" fill="#e7e7e7"/>
+                  <path id="Path_41353" data-name="Path 41353" d="M542.167,63.539l-9.886.522a3.249,3.249,0,0,0-3.073,3.416L530.817,98c0,.057.019.109.026.165L521.956,112.6c-.019.032-.029.066-.047.1a3.514,3.514,0,0,0-.692,2.046l-.237,18.185a3.593,3.593,0,0,0,3.505,3.635l.79.018a3.519,3.519,0,0,0,3.6-3.481l.221-16.972,9.081-14.76a3.4,3.4,0,0,0,.253-.523l1.535-.081,5.934,14.622-1.239,17.156a3.518,3.518,0,0,0,3.29,3.774l.788.05a3.594,3.594,0,0,0,3.8-3.324l1.309-18.14a3.509,3.509,0,0,0-.373-1.827,3.546,3.546,0,0,0-.109-.376l-6.189-15.246a2.854,2.854,0,0,0,.016-.323l-1.3-24.64,10.165,20a2.841,2.841,0,0,0,4.007.281l.477-.415a2.84,2.84,0,0,0,.281-4.007c-3.324-8.442-12.5-25.184-16.819-24.81A12.753,12.753,0,0,0,542.167,63.539Z" transform="translate(3.102 3.372)" fill="#e7e7e7"/>
+                  <path id="Path_41354" data-name="Path 41354" d="M510.453,66.425l13.888,4.231a2.782,2.782,0,0,1,.551.236,2.815,2.815,0,0,1,.52.291l10.452,7.546-5.307,3.856-8.46-6.013-13.483-4.108a2.841,2.841,0,0,1-1.891-3.545l.185-.6A2.841,2.841,0,0,1,510.453,66.425Z" transform="matrix(0.588, -0.809, 0.809, 0.588, 152.622, 456.536)" fill="#e7e7e7"/>
+                  <path id="Path_41355" data-name="Path 41355" d="M569.978,120.955a.562.562,0,0,0-.7.371c-.922,2.963-10.42,2.963-14,2.963h-31c-3.575,0-13.074,0-14-2.963a.563.563,0,1,0-1.075.334c.723,2.324,4.484,3.234,9.04,3.569l2.1,2.1a3.205,3.205,0,0,0-.424,1.574,3.253,3.253,0,1,0,6.507,0,3.212,3.212,0,0,0-.407-1.544l1.909-1.909a.4.4,0,0,0,.024-.038h25.038a.542.542,0,0,0,.052.078l1.838,1.838a3.222,3.222,0,0,0-.424,1.574,3.253,3.253,0,1,0,6.507,0,3.212,3.212,0,0,0-.407-1.544l2.172-2.173a.59.59,0,0,0,.058-.089c3.872-.421,6.915-1.37,7.559-3.438A.564.564,0,0,0,569.978,120.955Zm-46.8,10.076A2.128,2.128,0,1,1,525.3,128.9,2.129,2.129,0,0,1,523.176,131.031Zm34.536,0a2.128,2.128,0,1,1,2.128-2.128A2.13,2.13,0,0,1,557.713,131.031Z" transform="translate(0.557 15.754)" fill="#e7e7e7"/>
+                </g>
+            </svg>
+            <!-- <div class="hidden-cotainer-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="66.9" height="100.008" viewBox="0 0 66.9 100.008">
+                    <g id="man-back-hand-straight" transform="translate(-504.032 -47.902)">
+                      <path id="Path_41352" data-name="Path 41352" d="M530.975,64.683A9.027,9.027,0,1,0,527.85,52.3,9.027,9.027,0,0,0,530.975,64.683Z" transform="translate(4.309)" fill="#e7e7e7"/>
+                    </g>
+                </svg>
+            </div> -->
+            <!-- <div class="right-hidden-container" style="height: 100px; width: 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="hidden-svg" width="66.9" height="100.008" viewBox="0 0 66.9 100.008">
+                    <g id="man-back-hand-straight" transform="translate(-504.032 -47.902)">
+                      <path id="Path_41352" data-name="Path 41352" d="M530.975,64.683A9.027,9.027,0,1,0,527.85,52.3,9.027,9.027,0,0,0,530.975,64.683Z" transform="translate(4.309)" fill="#e7e7e7"/>
+                    </g>
+                </svg>
+            </div> -->
+        </div>
+        <div class="circle">
+            <svg class="right-letter-o" height="250" width="250">
+                <circle  cx="120" cy="120" r="100" stroke="white" stroke-width="20" fill="none" />
+            </svg>
+        </div>
+        <div class="line">
+            <svg class="line-letter-b" height="250" width="20">
+                <path d="M15,250 v-250" fill="none" stroke="white" stroke-width="25" />
+            </svg>
+        </div>
+    </div>
+    <script>
+        setTimeout(changeImage, 7000);
+
+        function changeImage() {
+            document.getElementsByClassName('moving-man')[0].style.display = "none";
+            document.getElementsByClassName('last-image')[0].style.display = "block";
+            document.getElementsByClassName('right-movement')[0].style.display = "none";
+            document.getElementsByClassName('right-last-image')[0].style.display = "block";
+        }
+
+        setTimeout(displayHiddenSvg, 8000);
+
+        function displayHiddenSvg() {
+            document.getElementsByClassName("hidden-container")[0].style.display = "block";
+            document.getElementsByClassName('right-hidden-container')[0].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

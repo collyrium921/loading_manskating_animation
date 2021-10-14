@@ -1,0 +1,52 @@
+html,
+body,
+div,
+span,
+table,
+td,
+p,
+input,
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Roboto", Helvetica, Calibri;
+    font-size: 100%;
+    line-height: 1em;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+
+/* 
+#red {
+
+} */
+
+.first {
+    animation: changePath 1s infinite;
+}
+
+@keyframes changePath {
+    100% {
+        d: path("M500 300, l 0 0");
+    }
+}
+
+
+/* svg path {
+    animation: changePath 0.3s infinite;
+}
+
+@keyframes changePath {
+    100% {
+        d: path("M 100 100 l 0 0");
+    }
+} */
